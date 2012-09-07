@@ -1,0 +1,23 @@
+[user]
+	name = Petter Wigle
+	email = petter.wigle@bukowskis.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+[alias]
+  c = commit -m
+  a = add
+  addall = !sh -c 'git add . && git add -u'
+  cob = checkout -b
+  co = checkout
+  b = branch -v
+  r = remote -v
+  t = tag -l
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[push]
+  default = upstream
