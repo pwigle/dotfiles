@@ -33,6 +33,9 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 
+(require 'tramp)
+(setq tramp-default-method "scp")
+
 ;; Turn on the clock!
 (autoload 'display-time "time" "clock in status bar" t) ;shut up compiler
 (if (locate-library "time")
