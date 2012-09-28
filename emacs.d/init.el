@@ -60,6 +60,7 @@
 
 (defun ruby-mode-hook ()
   ;;  (autoload 'ruby-mode "ruby-mode" nil t)
+  (message "ruby")
   (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
@@ -82,7 +83,8 @@
   (autoload 'rhtml-mode "rhtml-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
   (add-to-list 'auto-mode-alist '("\\.rjs\\'" . rhtml-mode))
-  (add-hook 'rhtml-mode '(lambda ()
+  (add-hook 'rhtml-mode-hook '(lambda ()
+                           (set-face-attribute 'erb-face nil :background nil)
                            (define-key rhtml-mode-map (kbd "M-s") 'save-buffer))))
 
 (defun yaml-mode-hook ()
@@ -138,7 +140,7 @@
 
 (setq el-get-sources
       '(
-        (:name ruby-mode)
+        (:name ruby-mode :after (progn (ruby-mode-hook)))
 ;               :type git
 ;               :url "https://github.com/david/ruby-mode.git"
 ;               :after (progn (ruby-mode-hook)))
@@ -161,7 +163,7 @@
                :type git
                :url "https://github.com/crazycode/rhtml.git"
                :features rhtml-mode
-               :after (progn (rhtml-mode-hook)))
+               :after (lambda () (rhtml-mode-hook)))
         (:name yaml-mode 
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
