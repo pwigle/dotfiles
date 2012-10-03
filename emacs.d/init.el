@@ -59,8 +59,7 @@
 (setq scss-compile-at-save nil)
 
 (defun ruby-mode-hook ()
-  ;;  (autoload 'ruby-mode "ruby-mode" nil t)
-  (message "ruby")
+  (autoload 'ruby-mode "ruby-mode" nil t)
   (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
@@ -137,6 +136,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
+(ruby-mode-hook)
 
 (setq el-get-sources
       '(
