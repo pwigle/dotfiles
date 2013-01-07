@@ -134,8 +134,8 @@
 (setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(require 'el-get)
+;(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+;(require 'el-get)
 (ruby-mode-hook)
 
 (setq el-get-sources
@@ -178,8 +178,8 @@
                :url "https://github.com/laynor/enotify.git")
         (:name full-ack)
         ))
-(setq my-packages
-      (append ()
-              (loop for src in el-get-sources collect (el-get-source-name src))))
+;(setq my-packages
+;      (append ()
+;              (loop for src in el-get-sources collect (el-get-source-name src))))
 
-(el-get 'sync my-packages)
+;(el-get 'sync my-packages)
