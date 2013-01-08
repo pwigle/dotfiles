@@ -130,56 +130,64 @@
         (set-buffer-modified-p t)
         (save-buffer 0))))
 
-(require 'package)
-(setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
-(package-initialize)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                           ("marmalade" . "http://marmalade-repo.org/packages/")
+                           ("tromey" . "http://tromey.com/elpa/")
+                           ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-;(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-;(require 'el-get)
+;; el-get
+;; (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+;; (unless (require 'el-get nil 'noerror)
+;;   (with-current-buffer
+;;       (url-retrieve-synchronously
+;;        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+;;     (goto-char (point-max))
+;;     (eval-print-last-sexp)))
+
+;; (el-get 'sync)
+
 (ruby-mode-hook)
 
-(setq el-get-sources
-      '(
-        (:name ruby-mode :after (progn (ruby-mode-hook)))
-;               :type git
-;               :url "https://github.com/david/ruby-mode.git"
-;               :after (progn (ruby-mode-hook)))
-        (:name inf-ruby  :type elpa)
-        (:name feature-mode)
-        (:name markdown-mode)
-        (:name haml-mode
-               :after (progn (haml-mode-hook)))
-        (:name coffee-mode)
-        (:name scss-mode)
-        (:name ruby-compilation :type elpa)
-        (:name css-mode 
-               :type elpa 
-               :after (progn (css-mode-hook)))
-        (:name textmate
-               :type git
-               :url "git://github.com/defunkt/textmate.el"
-               :load "textmate.el")
-        (:name rhtml
-               :type git
-               :url "https://github.com/crazycode/rhtml.git"
-               :features rhtml-mode
-               :after (lambda () (rhtml-mode-hook)))
-        (:name yaml-mode 
-               :type git
-               :url "http://github.com/yoshiki/yaml-mode.git"
-               :features yaml-mode
-               :after (progn (yaml-mode-hook)))
-        (:name magit
-               :type git
-               :url "https://github.com/magit/magit.git")
+;; (setq el-get-sources
+;;       '(
+;;         (:name ruby-mode :after (progn (ruby-mode-hook)))
+;;         (:name inf-ruby  :type elpa)
+;;         (:name feature-mode)
+;;         (:name markdown-mode)
+;;         (:name haml-mode
+;;                :after (progn (haml-mode-hook)))
+;;         (:name coffee-mode)
+;;         (:name scss-mode)
+;;         (:name ruby-compilation :type elpa)
+;;         (:name css-mode 
+;;                :type elpa 
+;;                :after (progn (css-mode-hook)))
+;;         (:name textmate
+;;                :type git
+;;                :url "git://github.com/defunkt/textmate.el"
+;;                :load "textmate.el")
+;;         (:name rhtml
+;;                :type git
+;;                :url "https://github.com/crazycode/rhtml.git"
+;;                :features rhtml-mode
+;;                :after (lambda () (rhtml-mode-hook)))
+;;         (:name yaml-mode 
+;;                :type git
+;;                :url "http://github.com/yoshiki/yaml-mode.git"
+;;                :features yaml-mode
+;;                :after (progn (yaml-mode-hook)))
+;;         (:name magit
+;;                :type git
+;;                :url "https://github.com/magit/magit.git")
                
-        (:name enotify
-               :type git
-               :url "https://github.com/laynor/enotify.git")
-        (:name full-ack)
-        ))
-;(setq my-packages
-;      (append ()
-;              (loop for src in el-get-sources collect (el-get-source-name src))))
+;;         (:name enotify
+;;                :type git
+;;                :url "https://github.com/laynor/enotify.git")
+;;         (:name full-ack)
+;;         ))
+;; (setq my-packages
+;;       (append ()
+;;               (loop for src in el-get-sources collect (el-get-source-name src))))
 
-;(el-get 'sync my-packages)
+;; (el-get 'sync my-packages)
