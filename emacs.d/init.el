@@ -14,6 +14,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (delete-selection-mode t)
+(menu-bar-mode -1)
+
 (when window-system
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
@@ -191,3 +193,4 @@
 ;;               (loop for src in el-get-sources collect (el-get-source-name src))))
 
 ;; (el-get 'sync my-packages)
+(add-to-list 'auto-mode-alist '("\\.scala" . scala-mode))
