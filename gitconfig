@@ -19,5 +19,6 @@
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
   l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  dc = diff --cached
 [push]
   default = upstream
