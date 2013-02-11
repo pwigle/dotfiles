@@ -194,3 +194,7 @@
 
 ;; (el-get 'sync my-packages)
 (add-to-list 'auto-mode-alist '("\\.scala" . scala-mode))
+(add-to-list 'auto-mode-alist '("\\.sbt" . scala-mode))
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.avsc" . json-mode))
+(add-to-list 'auto-mode-alist '("\\.avpr" . json-mode))
