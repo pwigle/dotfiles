@@ -32,7 +32,7 @@ function curl_json() {
   out=/tmp/curl_json.json
   echo > $out $out.err $out.pretty
   curl -s -H "Content-Type: application/json" -H "Accept: application/json" $@ > $out
-  jq -s -C . < $out > $out.pretty 2>$out.err
+  jq . < $out > $out.pretty 2>$out.err
   test -s $out.err && cat $out || cat $out.pretty
   echo
 }
