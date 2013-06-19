@@ -54,8 +54,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 source $HOME/.credentials
 export AWS_CLOUDWATCH_HOME=$HOME/tools/CloudWatch-1.0.13.4
 export AWS_CLOUDFORMATION_HOME=$HOME/tools/AWSCloudFormation-1.0.12
+export AWS_AUTO_SCALING_HOME=$HOME/tools/AutoScaling-1.0.61.2
 export AWS_SNS_HOME=$HOME/tools/SimpleNotificationServiceCli-1.0.3.3
-export PATH=$PATH:$AWS_CLOUDWATCH_HOME/bin:$AWS_SNS_HOME/bin:$AWS_CLOUDFORMATION_HOME/bin
+export PATH=$PATH:$AWS_CLOUDWATCH_HOME/bin:$AWS_SNS_HOME/bin:$AWS_CLOUDFORMATION_HOME/bin:$AWS_AUTO_SCALING_HOME/bin
 export AWS_CREDENTIAL_FILE=$HOME/.aws
 export EC2_REGION=eu-west-1
 export AWS_REGION=$EC2_REGION
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
