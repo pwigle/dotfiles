@@ -1,7 +1,7 @@
 (push "/usr/local/bin" exec-path)
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/themes")
-
+(load "thrift-mode")
 (setq initial-frame-alist
       '((top . 1) (left . 1) (width . 160) (height . 40)))
 
@@ -200,6 +200,7 @@
 (add-to-list 'auto-mode-alist '("\\.avpr" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.sls" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.jinja" . jinja2-mode))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
