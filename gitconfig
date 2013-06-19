@@ -10,6 +10,7 @@
 [alias]
   c = commit -m
   a = add
+  ac = commit -am
   addall = !sh -c 'git add . && git add -u'
   cob = checkout -b
   co = checkout
