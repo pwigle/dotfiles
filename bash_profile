@@ -37,6 +37,10 @@ function curl_json() {
   echo
 }
  
+function salt-tunnel() {
+  ssh -R 4505:localhost:4505 -R 4506:localhost:4506 $@
+}
+
 function curl_postjs() {
  curl_json -XPOST $@
 }
