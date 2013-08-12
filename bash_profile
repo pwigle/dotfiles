@@ -14,6 +14,7 @@ alias gs='git status --short'
 alias gemi='gem install --no-rdoc --no-ri'
 alias gg='git grep'
 alias gp='git pull'
+alias gd='git diff'
 alias git='hub'
 # Git branch in prompt.
 parse_git_branch() {
