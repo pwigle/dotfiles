@@ -37,6 +37,7 @@
 
 (require 'tramp)
 (setq tramp-default-method "scp")
+(set-default 'tramp-default-proxies-alist (quote ((".*" "\\`root\\'" "/ssh:%h:"))))
 
 ;; Turn on the clock!
 (autoload 'display-time "time" "clock in status bar" t) ;shut up compiler
