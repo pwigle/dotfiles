@@ -21,6 +21,7 @@
   uncommit = reset --soft HEAD^
   l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   dc = diff --cached
+  pullr = pull --rebase
 [push]
   default = upstream
 [merge]
