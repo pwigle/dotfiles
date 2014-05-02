@@ -25,6 +25,11 @@ alias gp='git pull'
 alias gd='git diff'
 alias git='hub'
 alias ll='ls -l'
+
+function tvoli-clone() {
+ git clone git@github.com:tvoli/$1.git
+}
+
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
