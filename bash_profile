@@ -64,9 +64,7 @@ function curl_putjs() {
   curl_json -XPUT $@
 }
 
-aurora-restart() {
-  ssh ${1}.eu-west-1.tvoli.com aurora restart ${1}-eu-west-1/magine/prod/${2}
-}
+source $HOME/.magine_commands
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
