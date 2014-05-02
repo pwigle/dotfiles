@@ -200,7 +200,7 @@
 (add-to-list 'auto-mode-alist '("\\.avsc" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.template" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.avpr" . json-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.sls" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.jinja" . jinja2-mode))
 (custom-set-variables
