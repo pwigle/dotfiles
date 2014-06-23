@@ -2,11 +2,10 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 ssh-add $HOME/.ssh/id_rsa $HOME/.ssh/staging.pem
-export PATH="$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/python"
+export PATH="$HOME/bin:/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/python:/Users/petter/tools/hadoop-2.0.0-cdh4.7.0/bin"
 export NODE_PATH="/usr/local/lib/node:/usr/local/share/npm/lib/node_modules"
 export CLASSPATH="$HOME/lib"
 export JAVA_OPTS="-Xms512m -Xmx2g"
-eval "$(rbenv init -)"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
@@ -65,6 +64,7 @@ function curl_putjs() {
 }
 
 source $HOME/.magine_commands
+source /usr/local/share/chruby/chruby.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
