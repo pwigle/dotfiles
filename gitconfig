@@ -19,9 +19,10 @@
   t = tag -l
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
-  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  l = log --graph --date=relative --topo-order --pretty='format:%C(yellow)%h%C(yellow)%d %Cblue%ar %Cgreenby %an%Creset -- %s'
   dc = diff --cached
   pullr = pull --rebase
+  pristine = clean -f -d -x
 [push]
   default = upstream
 [merge]
