@@ -96,3 +96,7 @@ source '/Users/petter/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/petter/google-cloud-sdk/completion.bash.inc'
+
+source ~/.magine-cli-complete.sh
+
+source ~/.magine-services-autocompletion.sh
