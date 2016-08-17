@@ -90,3 +90,9 @@ export JAVA_OPTS=$SBT_OPTS
 . $HOME/tools/z/z.sh
 complete -C aws_completer aws
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/petter/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/petter/google-cloud-sdk/completion.bash.inc'
