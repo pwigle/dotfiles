@@ -1,6 +1,9 @@
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;;; Packages
 (setq packages
@@ -14,15 +17,11 @@
   (unless (package-installed-p pkg)
     (package-refresh-contents) (package-install pkg)))
 
-
 (require 'ido)
+(require 'ensime)
 (ido-mode t)
 
 ;; Scala
-(require 'ensime)
-
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -31,8 +30,8 @@
  ;; If there is more than one, they won't work right.
  '(indent-tabs-mode nil)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
- '(js-indent-level 2))
-
+ '(js-indent-level 2)
+ )
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
 
