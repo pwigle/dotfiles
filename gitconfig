@@ -33,3 +33,7 @@
     trustExitCode = false
     keepBackup = false
 
+[http]
+	cookiefile = /Users/petter/.gitcookies
+[core]
+	excludesfile = /Users/petter/dotfiles/gitignore
