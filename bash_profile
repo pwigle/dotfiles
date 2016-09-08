@@ -87,6 +87,11 @@ export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 export SBT_OPTS="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 export JAVA_OPTS=$SBT_OPTS
+export KAFKA_ADDRESS=localhost:9092
+export ZOOKEEPER_ADDRESS=localhost:2181
+export CASSANDRA_ADDRESS=localhost:9042
+export SECRETS_FILE_PATH=/etc/magine/secrets.json
+export LOGIN_CACHE_ADDRESS=localhost:11211
 . $HOME/tools/z/z.sh
 complete -C aws_completer aws
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
