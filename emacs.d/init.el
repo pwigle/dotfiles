@@ -9,6 +9,9 @@
 (setq packages
       '(ensime
 	nyan-mode
+        yaml-mode
+        clojure-mode
+        json-mode
 	solarized-theme))
 
 (package-initialize)
@@ -35,4 +38,3 @@
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
 (setq make-backup-files nil)
-
