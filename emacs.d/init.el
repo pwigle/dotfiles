@@ -12,6 +12,7 @@
         yaml-mode
         clojure-mode
         json-mode
+        markdown-mode
 	solarized-theme))
 
 (package-initialize)
