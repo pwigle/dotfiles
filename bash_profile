@@ -43,3 +43,5 @@ export SBT_OPTS="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -X
 export JAVA_OPTS=$SBT_OPTS
 complete -C aws_completer aws
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+source ~/.credentials
+source ~/proj/ew/env_vars.sh
