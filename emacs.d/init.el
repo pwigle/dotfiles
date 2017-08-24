@@ -13,6 +13,7 @@
         clojure-mode
         json-mode
         markdown-mode
+        elm-mode
 	solarized-theme))
 
 (package-initialize)
@@ -35,7 +36,15 @@
  '(indent-tabs-mode nil)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(js-indent-level 2)
- )
+ '(package-selected-packages
+   (quote
+    (elm-mode solarized-theme markdown-mode json-mode clojure-mode yaml-mode nyan-mode ensime))))
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
 (setq make-backup-files nil)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
