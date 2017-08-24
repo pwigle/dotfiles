@@ -1,7 +1,11 @@
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
-export PATH="$HOME/bin:/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/python"
+export PATH="$HOME/bin:/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/python:/usr/local/share/dotnet"
+export PATH="$HOME/Android/tools:$PATH"
+
+export PATH="$HOME/Android/platform-tools:$PATH"
+export ANDROID_HOME="$HOME/Android"
 export NODE_PATH="/usr/local/lib/node:/usr/local/share/npm/lib/node_modules"
 export CLASSPATH="$HOME/lib"
 export JAVA_OPTS="-Xms512m -Xmx2g"
