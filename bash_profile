@@ -44,6 +44,5 @@ export JAVA_OPTS=$SBT_OPTS
 complete -C aws_completer aws
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 source ~/.credentials
-source ~/proj/ew/env_vars.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
