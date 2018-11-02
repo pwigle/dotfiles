@@ -28,12 +28,9 @@
 [push]
   default = upstream
 [merge]
-    tool = p4merge
-[mergetool "p4merge"]
-    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-    keepTemporaries = false
-    trustExitCode = false
-    keepBackup = false
+    tool = emacs
+[mergetool "emacs"]
+  cmd = $editor \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 
 [http]
 	cookiefile = /Users/petter/.gitcookies
