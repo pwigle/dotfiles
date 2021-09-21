@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
-(require 'rubocopfmt)
+;;(require 'rubocopfmt)
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
@@ -10,7 +10,7 @@
 
 ;;; Packages
 (setq packages
-      '(ensime
+      '(
 	restclient
 	nyan-mode
         yaml-mode
@@ -35,13 +35,13 @@
     (package-refresh-contents) (package-install pkg)))
 
 (require 'ido)
-(require 'ensime)
+;;(require 'ensime)
 (ido-mode t)
 
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
 (setq make-backup-files nil)
-(set-default-font "Monaco 14")
+;;(set-default-font "Monospace Regular 14")
 (setq ruby-insert-encoding-magic-comment nil)
 (dumb-jump-mode)
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
@@ -51,12 +51,19 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "#2e3436" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "PfEd" :family "DejaVu Sans Mono")))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
  '(custom-safe-themes
    (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(package-selected-packages
+   (quote
+    (dockerfile-mode docker vue-mode yaml-mode typescript-mode terraform-mode solarized-theme restclient pug-mode nyan-mode markdown-mode json-mode haml-mode elm-mode dumb-jump coffee-mode clojure-mode alchemist)))
+ '(tool-bar-mode nil))
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
