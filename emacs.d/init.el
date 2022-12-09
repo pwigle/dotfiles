@@ -26,6 +26,7 @@
         alchemist
         dumb-jump
         terraform-mode
+        ws-butler
 	solarized-theme))
 
 (package-initialize)
@@ -63,7 +64,14 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages
    (quote
-    (dockerfile-mode docker vue-mode yaml-mode typescript-mode terraform-mode solarized-theme restclient pug-mode nyan-mode markdown-mode json-mode haml-mode elm-mode dumb-jump coffee-mode clojure-mode alchemist)))
+    (slim-mode ws-butler csharp-mode dockerfile-mode docker vue-mode yaml-mode typescript-mode terraform-mode solarized-theme restclient pug-mode nyan-mode markdown-mode json-mode haml-mode elm-mode dumb-jump coffee-mode clojure-mode alchemist)))
  '(tool-bar-mode nil))
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
+(setq indent-tabs-mode nil
+      js-indent-level 2)
+(setq css-indent-offset 2)
+(setq-default indent-tabs-mode nil)
+(require 'ws-butler)
+(add-hook 'prog-mode-hook #'ws-butler-mode)
+(global-unset-key (kbd "<C-down-mouse-1>"))
